@@ -1,0 +1,23 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "eq-material-theme-icons-ocean",
+    "terminal.external.linuxExec": "terminator",
+    "materialTheme.autoApplyIcons": true,
+    "editor.fontSize": 15,
+    "background.enabled": true,
+    "background.useDefault": true,
+    "background.useFront": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+         "strings": true
+        },
+    "materialTheme.fixIconsRunning": false,
+    "fileheader.Author": "Lunatic",
+    "fileheader.LastModifiedBy": "Lunatic",
+    "indenticator.showHover": true,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "java.errors.incompleteClasspath.severity": "ignore"
+}
