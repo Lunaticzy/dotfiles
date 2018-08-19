@@ -1,0 +1,2 @@
+*/30       *       *       *       *       sh /home/lunatic/.time.sh
+*/10 * * * * /usr/bin/cgbg

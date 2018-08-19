@@ -1,0 +1,13 @@
+#!/bin/sh
+
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
+
+# PID=$(pgrep gnome-session)
+# export DBUS_SESSION_BUS_ADDRESS=$(grep -z DBUS_SESSION_BUS_ADDRESS /proc/$PID/environ|cut -d= -f2-)
+
+img_num=`date "+%Y%m%d%H%M%S"`
+echo -e "\033[32m 壁纸下载中...... \033[0m"
+wget -qO ~/.local/share/backgrounds/bg_$img_num.jpg https://www.xwboke.cn/api/api.php
+/usr/bin/gsettings set org.gnome.desktop.background picture-uri ~/.local/share/backgrounds/bg_$img_num.jpg
+
+echo -e "\033[32m 壁纸更换完成  \033[0m"

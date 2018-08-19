@@ -9,4 +9,6 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 # gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':<'fcitx'>}"
 
-~/.Conky/startconky.sh
+sh ~/.Conky/startconky.sh
+
+nohup /usr/bin/mplayer -ao alsa -really-quiet /home/lunatic/.logged.mp3 >>/dev/null 2>&1 &
