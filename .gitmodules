@@ -1,0 +1,3 @@
+[submodule "Conky"]
+	path = Conky
+	url = https://github.com/9527tech/conkyrc
