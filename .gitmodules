@@ -1,3 +1,6 @@
 [submodule "Conky"]
 	path = Conky
 	url = https://github.com/9527tech/conkyrc
+[submodule "tmux"]
+	path = tmux
+	url = https://github.com/tony/tmux-config
