@@ -38,10 +38,11 @@ syntax enable
 set background=dark
 "colorscheme solarized
 colorscheme molokai
+"colorscheme space-vim-dark
 
 set mouse=a
 
-"set number
+set number
 set relativenumber
 set showmode
 set showcmd
