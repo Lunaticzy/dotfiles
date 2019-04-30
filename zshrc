@@ -14,7 +14,7 @@ ZSH_THEME="ys"
 # cause zsh load theme from this variable instead of
 # looking in ~/.oh-my-zsh/themes/
 # An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+#ZSH_THEME_RANDOM_CANDIDATES=( "ys" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -73,6 +73,8 @@ plugins=(
   encode64
   zsh-autosuggestions
   d
+  go
+  heroku
  # zsh_stats
 )
 
@@ -80,7 +82,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
  export LANG=zh_CN.UTF-8
@@ -104,18 +106,80 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias pping=prettyping
+
+
+# proxychains
+alias pc='proxychains -q'
+
+# trash-cli
+alias rm='trash-put'
+alias rm.list='trash-list'
+alias rm.restore='trash-restore'
+alias rm.delete='trash-rm'
+alias rm.empty='trash-empty'
+alias rm.origin='/bin/rm -fr'
+
+# advcp 
+alias cp='acp -g'
+alias mv='amv -g'
+
+# change ls to exa
+#alias ls='exa --color=always --group-directories-first'
+#alias la='exa -a --color=always --group-directories-first' 
+#alias ll='exa -l --color=always --group-directories-first'
+#alias lt='exa -aT --color=always --group-directories-first'
+
+alias sudo='sudo -E'
+
 export VISUAL="vim"
 
-
-#export GOPATH=/home/用户名/lunatic/go
+#export GOPATH=/home/lunatic/go
 #export GOBIN=$GOPATH/bin
 #export PATH=$GOBIN:$PATH
 
+##export PATH=/opt/anaconda/bin:$PATH
 
-#export PATH=/opt/anaconda/bin:$PATH
+export PATH=$PATH:~/bin/
 
+echo -e "
+ ▄█       ███    █▄  ███▄▄▄▄      ▄████████     ███      ▄█   ▄████████ 
+███       ███    ███ ███▀▀▀██▄   ███    ███ ▀█████████▄ ███  ███    ███ 
+███       ███    ███ ███   ███   ███    ███    ▀███▀▀██ ███▌ ███    █▀  
+███       ███    ███ ███   ███   ███    ███     ███   ▀ ███▌ ███        
+███       ███    ███ ███   ███ ▀███████████     ███     ███▌ ███        
+███       ███    ███ ███   ███   ███    ███     ███     ███  ███    █▄  
+███▌    ▄ ███    ███ ███   ███   ███    ███     ███     ███  ███    ███ 
+█████▄▄██ ████████▀   ▀█   █▀    ███    █▀     ▄████▀   █▀   ████████▀  
+"| lolcat
 
-alias cp='acp -g'
-alias mv='amv -g'
+en ~/bin/sysinfo
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source /usr/share/doc/pkgfile/command-not-found.zsh
+
+arex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via arex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
