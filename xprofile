@@ -1,14 +1,13 @@
 export LANG=zh_CN.UTF-8
-export LANGUGE=zh_CN:en_US
+export LANGGUAGE=zh_CN.UTF-8
 export LC_CTYPE=en_US.UTF-8
 
-export XIM=fcitx 
-export XIM_PROGRAM=fcitx 
+
+export XIM=fcitx
+export XIM_PROGRAM=fcitx
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
-# gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':<'fcitx'>}"
+#/usr/bin/mplayer -ao alsa -really-quiet -noconsolecontrols /home/lunatic/.logged.mp3
 
-sh ~/.Conky/startconky.sh
-
-nohup /usr/bin/mplayer -ao alsa -really-quiet /home/lunatic/.logged.mp3 >>/dev/null 2>&1 &
+nohup /usr/lib/gsd-xsettings &

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=addkey
+Comment=addkey
+Exec=/usr/bin/mplayer -ao alsa -really-quiet -noconsolecontrols /home/lunatic/.logged.mp3
+StartupNotify=false
+Terminal=false

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=addkey
+Comment=addkey
+Exec=/home/lunatic/.addkey.except
+StartupNotify=false
+Terminal=false

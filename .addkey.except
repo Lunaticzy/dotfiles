@@ -1,0 +1,5 @@
+#!/usr/bin/expect -f
+spawn ssh-add /home/lunatic/.ssh/lunatic.key
+expect "Enter passphrase for /home/lunatic/.ssh/lunatic.key:"
+send "password\n";
+expect "Identity added: /home/user/.ssh/id_rsa (/home/lunatic/.ssh/lunatic.key)"
