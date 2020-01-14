@@ -59,24 +59,27 @@ ZSH_THEME="ys"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  python
   git
+  git-flow-avh
   sudo
   archlinux 
   wd
   zsh-syntax-highlighting
+  docker
+  docker-compose
   extract
+  copyfile
   web-search
   pip
   python
-  catimg
   encode64
   zsh-autosuggestions
-  d
+#  d
   go
   heroku
   autojump
- # zsh_stats
+  yarn
+#  zsh_stats
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -124,14 +127,22 @@ alias rm.empty='trash-empty'
 alias rm.origin='/bin/rm -fr'
 
 # advcp 
-alias cp='acp -g'
-alias mv='amv -g'
+#alias cp='acp -g'
+#alias mv='amv -g'
 
 # change ls to exa
 #alias ls='exa --color=always --group-directories-first'
 #alias la='exa -a --color=always --group-directories-first' 
 #alias ll='exa -l --color=always --group-directories-first'
 #alias lt='exa -aT --color=always --group-directories-first'
+
+# change ls to lsd
+alias ls='lsd'
+alias alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+
 
 alias sudo='sudo -E'
 
@@ -143,7 +154,7 @@ export VISUAL="vim"
 
 ##export PATH=/opt/anaconda/bin:$PATH
 
-export PATH=$PATH:~/bin/
+export PATH=$PATH:~/bin/:/home/lunatic/.cargo/bin
 
 echo -e "
  ▄█       ███    █▄  ███▄▄▄▄      ▄████████     ███      ▄█   ▄████████ 
