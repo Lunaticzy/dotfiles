@@ -80,6 +80,7 @@ plugins=(
   autojump
   yarn
 #  zsh_stats
+  gradle
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -90,7 +91,7 @@ export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
  export LANG=zh_CN.UTF-8
-
+ 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
@@ -137,8 +138,8 @@ alias rm.origin='/bin/rm -fr'
 #alias lt='exa -aT --color=always --group-directories-first'
 
 # change ls to lsd
-alias ls='lsd'
-alias alias l='ls -l'
+alias ls='lsd --icon-theme unicode'
+alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
@@ -146,13 +147,24 @@ alias lt='ls --tree'
 
 alias sudo='sudo -E'
 
+alias dk='docker'
+alias dkc='docker-compose'
+
+alias lgit="lazygit"
+
+alias c="clipcopy"
+
+alias rp="realpath"
+
+alias traceroute="besttrace -q1 -g cn"
+
 export VISUAL="vim"
 
-#export GOPATH=/home/lunatic/go
-#export GOBIN=$GOPATH/bin
-#export PATH=$GOBIN:$PATH
+export GOPATH=/home/lunatic/go
+export GOBIN=$GOPATH/bin
+export PATH=$GOBIN:$PATH
 
-##export PATH=/opt/anaconda/bin:$PATH
+#export PATH=/opt/anaconda/bin:$PATH
 
 export PATH=$PATH:~/bin/:/home/lunatic/.cargo/bin
 
@@ -173,3 +185,5 @@ en ~/bin/sysinfo
 
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
+#fpath+=/home/lunatic/.oh-my-zsh/custom/plugins/conda-zsh-completion
+#compinit conda
