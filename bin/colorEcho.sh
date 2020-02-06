@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ####### 颜色代码 ########
 RED="31m"      # Error message
 GREEN="32m"    # Success message
