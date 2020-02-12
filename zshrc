@@ -129,8 +129,8 @@ alias rm.empty='trash-empty'
 alias rm.origin='/bin/rm -fr'
 
 # advcp 
-#alias cp='acp -g'
-#alias mv='amv -g'
+alias cp='acp -g'
+alias mv='amv -g'
 
 # change ls to exa
 #alias ls='exa --color=always --group-directories-first'
@@ -151,13 +151,14 @@ alias sudo='sudo -E'
 alias dk='docker'
 alias dkc='docker-compose'
 
-alias lgit="lazygit"
+alias lzgit="lazygit"
 
 alias c="clipcopy"
 
 alias rp="realpath"
 
 alias traceroute="besttrace -q1 -g cn"
+alias lzdk='lazydocker'
 
 export VISUAL="vim"
 
@@ -184,6 +185,7 @@ en ~/bin/sysinfo
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# need package pkgfile
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
 #fpath+=/home/lunatic/.oh-my-zsh/custom/plugins/conda-zsh-completion
