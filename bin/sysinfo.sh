@@ -26,7 +26,7 @@ ${W}  Distro......: ${W}$(cat /etc/*release | grep "PRETTY_NAME" | cut -d "=" -f
 ${W}  Kernel......: ${W}$(uname -sr)
 ${W}  Uptime......: ${W}$(uptime -p)
 ${W}  Load........: ${G}$LOAD1${W} (1m), ${G}$LOAD5${W} (5m), ${G}$LOAD15${W} (15m)
-${W}  Processes...: ${W} ${G}$PROCESS_ROOT${W} (root), ${G}$PROCESS_USER${W} (user), ${G}$PROCESS_ALL${W} (total)
+${W}  Processes...: ${W}${G}$PROCESS_ROOT${W} (root), ${G}$PROCESS_USER${W} (user), ${G}$PROCESS_ALL${W} (total)
 ${W}  CPU.........: ${W}$PROCESSOR_NAME (${G}$PROCESSOR_COUNT${W} vCPU)
 ${W}  CPU_TEMP....: ${G}$CPU_TEMP 
 ${W}  Memory......: ${G}$M_USED${W} used, ${G}$M_FREE${W} free, ${G}$M_TOTAL${W} total${W}
