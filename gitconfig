@@ -1,26 +1,19 @@
 [user]
-        name = 9527tech
-        email = 2320874815@qq.com
-
-#[http]
-#proxy = socks5://127.0.0.1:1080
-#[https]
-#proxy = socks5://127.0.0.1:1080
-[merge]
+	email = 2320874815@qq.com
+	name = Lunatic
+[https]
+	proxy = socks5://127.0.0.1:1080
+[http]
+	proxy = socks5://127.0.0.1:1080
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(red)%h%C(r) —— %C(bold blue)%an%C(r): %C(white)%s%C(r) %C(dim white) %C(bold green)(%ar)%C(r) %C(bold yellow)%d%C(r)' --all
+	d = difftool
+[diff]
 	tool = vimdiff
-[color]
-	ui = true
-[core]
-	pager = diff-so-fancy | less --tabs=4 -RFX
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-[color "diff"]
-	meta = 227
-	frag = magenta bold
-	commit = 227 bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+[difftool]
+	prompt = false
