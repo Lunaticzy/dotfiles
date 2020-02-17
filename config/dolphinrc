@@ -1,0 +1,44 @@
+[CompactMode]
+FontWeight=50
+
+[DetailsMode]
+FontWeight=50
+
+[DownloadDialog Settings]
+Height 1080=496
+Width 1920=700
+
+[General]
+ConfirmClosingMultipleTabs=false
+ShowCopyMoveMenu=true
+Version=200
+ViewPropsTimestamp=2020,1,15,1,46,3
+
+[IconsMode]
+FontWeight=50
+PreviewSize=96
+
+[KFileDialog Settings]
+detailViewIconSize=0
+
+[KPropertiesDialog]
+Height 1080=456
+Width 1920=403
+
+[MainWindow]
+Height 1080=500
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAwAAAAAAAAC4AAAByvwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAIA////+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAqAAABygAAAE4A////AAAAAQAAAAAAAAAA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAD/////AAAAAgD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAA/////wAAAAIA////AAACMgAAAcoAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+Width 1920=750
+
+[Open-with settings]
+CompletionMode=1
+History=密码,fox
+
+[PreviewSettings]
+Plugins=appimagethumbnail,djvuthumbnail,exrthumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mltpreview,opendocumentthumbnail,svgthumbnail,imagethumbnail,fontthumbnail,directorythumbnail,comicbookthumbnail,ebookthumbnail,ffmpegthumbs,audiothumbnail
+
+[SettingsDialog]
+Height 1080=486
+Width 1920=540
