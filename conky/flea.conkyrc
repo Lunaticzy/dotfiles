@@ -1,0 +1,109 @@
+-- vim: ts=4 sw=4 noet ai cindent syntax=lua
+conky.config = {
+    -------------------- Windows Setting
+    own_window = true,
+    own_window_type = 'normal',
+    own_window_transparent = true,
+    own_window_hints = 'undecorated,below,skip_taskbar,skip_pager',
+    own_window_colour = '#000000',
+    own_window_class = 'Conky',
+    own_window_title = 'Flea Conky',
+    own_window_argb_visual = true,
+    own_window_argb_value = 50,
+
+    -------------------- Location
+    minimum_width = 500, 
+    minimum_height = 100,
+    maximum_width = 800,
+    gap_x = 0,
+    gap_y = 150,
+    alignment = 'middle_middle',
+
+    -------------------- Font
+    use_xft = true,
+    font = 'GE Inspira:bold:size=20',
+    xftalpha = 1,
+    override_utf8_locale = true,
+    uppercase = true,
+
+    -------------------- Color
+    draw_shades = false,
+    default_shade_color = 'black',
+
+    draw_outline = false,
+    default_outline_color = 'black',
+
+    default_color = '#ffffff', -- White
+    color1 = '#bf616a', -- Red
+    color2 = '#a3be8c', -- Green
+    color3 = '#ebcb8b', -- Yellow
+    color4 = '#81a1c1', -- Blue
+    color5 = '#b48ead', -- Magenta
+    color6 = '#88c0d0', -- Cyan
+
+    --------------------  Borders 
+    draw_borders = false,
+    -- Stippled borders?
+    stippled_borders = 5,
+    -- border margins
+    border_inner_margin = 40,
+    border_outer_margin = 0,
+    -- border width
+    border_width = 2,
+    -- graph borders
+    draw_graph_borders = true,
+    --default_graph_size 15 40
+
+    -------------------- Others
+    -- Boolean value, if true, Conky will be forked to background when started.
+    background = true,
+    -- Adds spaces around certain objects to stop them from moving other things
+    -- around, this only helps if you are using a mono font
+    -- Options: right, left or none
+    use_spacer = 'none',
+
+    -- Default and Minimum size is 256 - needs more for single commands that
+    -- "call" a lot of text IE: bash scripts
+    --text_buffer_size 6144
+
+    -- Subtract (file system) buffers from used memory?
+    no_buffers = true,
+
+    -- change GiB to G and MiB to M
+    short_units = true,
+
+    -- Like it says, ot pads the decimals on % values
+    -- doesn't seem to work since v1.7.1
+    pad_percents = 2,
+
+    -- Imlib2 image cache size, in bytes. Default 4MiB Increase this value if you use
+    -- $image lots. Set to 0 to disable the image cache.
+    -- imlib_cache_size = 0,
+
+    -- Use the Xdbe extension? (eliminates flicker)
+    -- It is highly recommended to use own window with this one
+    -- so double buffer won't be so big.
+    double_buffer = true,
+
+    --   Maximum size of user text buffer, i.e. layout below TEXT line in config file
+    --  (default is 16384 bytes)
+    -- max_user_text 16384
+
+    -- Desired output unit of all objects displaying a temperature. Parameters are
+    -- either "fahrenheit" or "celsius". The default unit is degree Celsius.
+    -- temperature_unit Fahrenheit
+
+    update_interval = 1,
+    update_interval_on_battery = 10,
+
+};
+
+conky.text = [[
+${alignc}${font GE Inspira:bold:size=16}Hello,\
+${font GE Inspira:bold:size=16} ${color4}${execi 60 whoami}!${color}${font}
+${voffset 10}${alignc}Today is ${color5}${time %A}${color}${font}, \
+${time %B} ${color2}${time %-d}${color}${font} \
+at ${color1}${time %H:%M}${color}${font}
+${voffset 20}${alignc}${font GE Inspira:bold:size=20}Today will be ${execi 1800 ~/.conky/weather}
+${voffset 20}${alignc}${font GE Inspira:bold:size=16}${execi 1800 ~/.conky/weather -t}
+]];

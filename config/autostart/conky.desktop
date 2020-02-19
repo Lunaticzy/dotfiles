@@ -1,0 +1,6 @@
+#!/usr/bin/env xdg-open
+ [Desktop Entry]
+Name=conky
+Exec=sh /home/lunatic/.conky/conky-startup.sh
+Type=Application
+Terminal=false
