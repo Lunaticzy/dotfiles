@@ -15,7 +15,7 @@ PROCESS_USER=$(echo "$PROCESS"| grep -v root | awk '{print $2}' | awk '{ SUM += 
 PROCESSOR_NAME=$(grep "model name" /proc/cpuinfo | cut -d ' ' -f3- | awk '{print $0}' | head -1)
 PROCESSOR_COUNT=$(grep -ioP 'processor\t:' /proc/cpuinfo | wc -l)
 # get cpu temperature
-CPU_TEMP=$(cat /sys/class/thermal/thermal_zone8/temp | sed 's/\(.\)..$/.\1°C/')
+# CPU_TEMP=$(cat /sys/class/thermal/thermal_zone8/temp | sed 's/\(.\)..$/.\1°C/')
 
 W="\e[0;39m"
 G="\e[1;32m"
@@ -28,6 +28,5 @@ ${W}  Uptime......: ${W}$(uptime -p)
 ${W}  Load........: ${G}$LOAD1${W} (1m), ${G}$LOAD5${W} (5m), ${G}$LOAD15${W} (15m)
 ${W}  Processes...: ${W}${G}$PROCESS_ROOT${W} (root), ${G}$PROCESS_USER${W} (user), ${G}$PROCESS_ALL${W} (total)
 ${W}  CPU.........: ${W}$PROCESSOR_NAME (${G}$PROCESSOR_COUNT${W} vCPU)
-${W}  CPU_TEMP....: ${G}$CPU_TEMP 
 ${W}  Memory......: ${G}$M_USED${W} used, ${G}$M_FREE${W} free, ${G}$M_TOTAL${W} total${W}
 ${W}  Swap........: ${G}$S_USED${W} used, ${G}$S_FREE${W} free, ${G}$S_TOTAL${W} total${W}"
