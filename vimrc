@@ -36,6 +36,7 @@ Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/fcitx.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'}
+Plug 'francoiscabrol/ranger.vim'
 
 Plug 'flazz/vim-colorschemes'
 call plug#end()
@@ -87,6 +88,9 @@ let g:mapleader = ','
 
 nnoremap <C-N> :bn<CR>                                                              
 nnoremap <C-P> :bp<CR> 
+
+" suda smart edit
+let g:suda_smart_edit = 1
 
 let g:deoplete#enable_at_startup = 1
 
