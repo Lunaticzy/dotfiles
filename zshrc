@@ -188,5 +188,25 @@ en ~/bin/sysinfo
 # need package pkgfile
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
+clone(){
+    echo Cloning $1 to ~/works/git
+    cd ~/works/git
+    git clone $1 
+    echo Clone succeed
+}
+
+memtotal() {
+	ps aux |grep -v grep|grep -i $1 |awk '{sum+=$6} END {print sum/1024"MB"}'
+}
+
+top10mem() {
+    ps aux | sort -k6,6nr | head -n 10 |awk '{OFS="    "}{print $6 / 1024 "MB",$1,$2,$11}'
+}
+
+top10cpu() {
+    ps aux | sort -k3,3nr | head -n 10 |awk '{OFS="    "}{print $3,$1,$2,$11}' 
+}
 #fpath+=/home/lunatic/.oh-my-zsh/custom/plugins/conda-zsh-completion
 #compinit conda
+#
+# vim: ts=4 sw=4 noet ai cindent
