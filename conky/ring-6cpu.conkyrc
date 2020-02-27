@@ -92,7 +92,7 @@ ${voffset 30}
 ${hr 2}
 # ${font Technical CE:bold:size=12}NVIDIA:${font}${alignr}GPU1: ${exec nvidia-settings -t -q [gpu:0]/GPUCoreTemp} °C  GPU2: ${exec nvidia-settings -t -q [gpu:1]/GPUCoreTemp} °C
 ${hr 2}
-Wan:${goto 38}${execi 3600 wget -qO- -t1 -T2 ipinfo.io/ip}
+Wan:${goto 38}${execi 3600 wget -qO- -t1 -T2 ipv4.icanhazip.com}
 Lan:${goto 38}${addr wlo1}
 Open Ports:${goto 80}${tcp_portmon 1 65535 count}
 ${hr 2}
