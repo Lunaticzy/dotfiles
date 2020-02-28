@@ -117,6 +117,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias pping=prettyping
 
 
+
 # proxychains
 alias pc='proxychains -q'
 
@@ -146,7 +147,7 @@ alias lla='ls -la'
 alias lt='ls --tree'
 
 
-alias sudo='sudo -E'
+alias sudo='sudo -E '
 
 alias dk='docker'
 alias dkc='docker-compose'
