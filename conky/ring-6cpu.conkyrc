@@ -77,8 +77,8 @@ ${alignr}${top name 2}
 ${alignr}${top name 3}
 ${alignr}${top name 4}
 ${voffset -30}${goto 55}Disc Useage
-${voffset 38}${goto 110}${font}Home ${fs_used /home} used
-${goto 110}System ${fs_used /} used
+${voffset 38}${goto 110}${font}Home ${fs_free /home} Avail
+${goto 110}System ${fs_free /} Avail
 ${voffset -10}
 ${voffset 20}$mem of $memmax Total
 ${top_mem name 1}
