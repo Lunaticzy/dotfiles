@@ -81,10 +81,12 @@ plugins=(
   yarn
 #  zsh_stats
   gradle
+  mvn
 )
 
 source $ZSH/oh-my-zsh.sh
 
+export DOTFILES="~/works/git/dotfiles"
 # User configuration
 
 export MANPATH="/usr/local/man:$MANPATH"
@@ -163,7 +165,7 @@ alias lzdk='lazydocker'
 
 export VISUAL="vim"
 
-export GOPATH=/home/lunatic/go
+export GOPATH=/home/lunatic/works/go
 export GOBIN=$GOPATH/bin
 export PATH=$GOBIN:$PATH
 
@@ -171,7 +173,7 @@ export PATH=$GOBIN:$PATH
 
 export PATH=$PATH:~/bin/:/home/lunatic/.cargo/bin
 
-echo -e "
+command -v lolcat >/dev/null 2>&1 && echo -e "
  ▄█       ███    █▄  ███▄▄▄▄      ▄████████     ███      ▄█   ▄████████ 
 ███       ███    ███ ███▀▀▀██▄   ███    ███ ▀█████████▄ ███  ███    ███ 
 ███       ███    ███ ███   ███   ███    ███    ▀███▀▀██ ███▌ ███    █▀  
@@ -182,12 +184,12 @@ echo -e "
 █████▄▄██ ████████▀   ▀█   █▀    ███    █▀     ▄████▀   █▀   ████████▀  
 "| lolcat
 
-en ~/bin/sysinfo
+command -v en >/dev/null 2>&1 && [ -f ~/bin/sysinfo ] && en ~/bin/sysinfo
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # need package pkgfile
-source /usr/share/doc/pkgfile/command-not-found.zsh
+[ -f /usr/share/doc/pkgfile/command-not-found.zsh ] && source /usr/share/doc/pkgfile/command-not-found.zsh
 
 clone(){
     echo Cloning $1 to ~/works/git

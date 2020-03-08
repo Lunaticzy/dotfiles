@@ -25,6 +25,11 @@ echo "${NOTICE}"
 TODAY=$(date "+%m月%d号")
 WEEKDAY=$(date "+星期%w")
 
+if [[ ${WEEKDAY} == "星期0" ]] ;then
+    WEEKDAY="星期天"
+fi
+
+
 SENTENCE="今天是${TODAY},${WEEKDAY},今天的天气是${TYPE},温度${TEMPERATURE}摄氏度,相对湿度为${HUMIDITY},pm2.5指数为${PM25},pm10指数为${PM10},空气状况为${QUALITY},${NOTICE}"
 say "${SENTENCE}"
 
