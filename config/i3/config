@@ -11,7 +11,6 @@ bindsym $mod+n border normal
 
 # font xft:URWGothic-Book 11
 font pongo:Noto Sans CJK SC 12
-font xft:Noto Sans CJK SC 12
 
 floating_modifier $mod
 
@@ -228,6 +227,7 @@ exec_always --no-startup-id feh --recursive --randomize --bg-fill Pictures/Wallp
 exec_always --no-startup-id tint2
 exec_always --no-startup-id deadd-notification-center
 exec_always --no-startup-id /opt/electron-ssr/electron-ssr --hidden
+exec_always --no-startup-id volumeicon
 
 # Theme colors
 client.focused          #272827 #272827 #657b83 #272827 #272827
