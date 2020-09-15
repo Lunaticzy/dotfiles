@@ -98,9 +98,9 @@ Lan:${goto 38}${addr wlo1}
 Open Ports:${goto 80}${tcp_portmon 1 65535 count}
 ${hr 2}
 Top 5 Open Ports
-IP:${goto 30}${tcp_portmon 1 65535 rip  0}:${tcp_portmon 1 65535 rport  0}
-${goto 30}${tcp_portmon 1 65535 rip  1}:${tcp_portmon 1 65535 rport  1}
-${goto 30}${tcp_portmon 1 65535 rip  2}:${tcp_portmon 1 65535 rport  2}
-${goto 30}${tcp_portmon 1 65535 rip  3}:${tcp_portmon 1 65535 rport  3}
-${goto 30}${tcp_portmon 1 65535 rip  4}:${tcp_portmon 1 65535 rport  4}
+IP:${goto 30}${tcp_portmon 1 65535 rip  0}:${tcp_portmon 1 65535 rport  0} ${tcp_portmon 1 65535 rservice  0}
+${goto 30}${tcp_portmon 1 65535 rip  1}:${tcp_portmon 1 65535 rport  1} ${tcp_portmon 1 65535 rservice  1}
+${goto 30}${tcp_portmon 1 65535 rip  2}:${tcp_portmon 1 65535 rport  2} ${tcp_portmon 1 65535 rservice  2}
+${goto 30}${tcp_portmon 1 65535 rip  3}:${tcp_portmon 1 65535 rport  3} ${tcp_portmon 1 65535 rservice  3}
+${goto 30}${tcp_portmon 1 65535 rip  4}:${tcp_portmon 1 65535 rport  4} ${tcp_portmon 1 65535 rservice  4}
 ]];
