@@ -1,6 +1,16 @@
 set nocompatible
 set encoding=utf-8
 
+
+
+
+if empty(glob(expand(" ~/.vim/autoload/plug.vim")))
+  silent !curl -fLo  ~/.vim/autoload/plug.vim  --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
+endif
+source  ~/.vim/autoload/plug.vim 
+
 call plug#begin('~/.vim/plugged')
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
