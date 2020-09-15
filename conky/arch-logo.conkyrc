@@ -3,6 +3,7 @@ conky.config = {
 	--------------------------- Windows setting
 	own_window = true,
 	own_window_type = 'normal',
+--	own_window_type = 'override',
 	--own_window_type = 'desktop',
 	own_window_transparent = true,
 	own_window_hints = 'undecorated,sticky,below,skip_taskbar,skip_pager',

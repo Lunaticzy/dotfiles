@@ -3,7 +3,8 @@ conky.config = {
 	own_window = true,
 	own_window_transparent = true,
 	own_window_class = 'conky',
-    own_window_type = 'normal',
+   own_window_type = 'normal',
+--	own_window_type = 'override',
 	own_window_argb_visual = true,
     own_window_argb_value = E6000000,
 	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
@@ -97,9 +98,9 @@ Lan:${goto 38}${addr wlo1}
 Open Ports:${goto 80}${tcp_portmon 1 65535 count}
 ${hr 2}
 Top 5 Open Ports
-IP:${goto 30}${tcp_portmon 1 65535 rip  0}
-${goto 30}${tcp_portmon 1 65535 rip  1}
-${goto 30}${tcp_portmon 1 65535 rip  2}
-${goto 30}${tcp_portmon 1 65535 rip  3}
-${goto 30}${tcp_portmon 1 65535 rip  4}
+IP:${goto 30}${tcp_portmon 1 65535 rip  0}:${tcp_portmon 1 65535 rport  0}
+${goto 30}${tcp_portmon 1 65535 rip  1}:${tcp_portmon 1 65535 rport  1}
+${goto 30}${tcp_portmon 1 65535 rip  2}:${tcp_portmon 1 65535 rport  2}
+${goto 30}${tcp_portmon 1 65535 rip  3}:${tcp_portmon 1 65535 rport  3}
+${goto 30}${tcp_portmon 1 65535 rip  4}:${tcp_portmon 1 65535 rport  4}
 ]];
